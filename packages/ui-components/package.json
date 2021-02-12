@@ -10,7 +10,7 @@
   ],
   "scripts": {
     "build": "tsc -p ./src",
-    "start": "tsc -p ./src --watch",
+    "start": "tsc -p . --watch",
     "test": "jest --config=./jest.config.js --colors",
     "test:update": "jest --config=./jest.config.js --u --colors",
     "test:watch": "jest --config=./jest.config.js --watch --colors",
