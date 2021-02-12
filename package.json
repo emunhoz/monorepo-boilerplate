@@ -9,6 +9,11 @@
     "packages/**/*"
   ],
   "license": "MIT",
+  "scripts": {
+    "commit": "git-cz",
+    "test:app": "yarn workspace @monorepo/cra test",
+    "start": "yarn workspace @monorepo/cra start"
+  },
   "devDependencies": {
     "lerna": "^3.22.1",
     "husky": "^4.0.6",
