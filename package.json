@@ -11,6 +11,8 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
+    "publish:ci": "lerna publish from-package --yes --no-verify-registry --no-verify-access && git add -u .",
+    "version:ci": "lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'",
     "test:components": "yarn workspace @monorepo/ui-components test",
     "test:app": "yarn workspace @monorepo/cra test",
     "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
@@ -19,7 +21,7 @@
     "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
     "lint": "yarn workspace @monorepo/ui-components lint && yarn workspace @monorepo/cra lint",
     "lint:css": "yarn workspace @monorepo/ui-components lint:css && yarn workspace @monorepo/cra lint:css",
-    "test:ci": "yarn workspace @monorepo/ui-components test:coverage && yarn workspace @monorepo/app test:coverage"
+    "test:ci": "yarn workspace @monorepo/ui-components test:coverage && yarn workspace @monorepo/cra test:coverage"
   },
   "devDependencies": {
     "lerna": "^3.22.1",
