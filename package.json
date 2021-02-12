@@ -17,6 +17,7 @@
     "test:app": "yarn workspace @monorepo/cra test",
     "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
     "start": "yarn workspace @monorepo/cra start",
+    "build-app": "yarn workspace @monorepo/cra build",
     "storybook": "yarn workspace @monorepo/ui-components storybook",
     "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
     "lint": "yarn workspace @monorepo/ui-components lint && yarn workspace @monorepo/cra lint",
