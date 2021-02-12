@@ -13,7 +13,7 @@
     "commit": "git-cz",
     "test:components": "yarn workspace @monorepo/ui-components test",
     "test:app": "yarn workspace @monorepo/cra test",
-    "postinstall": "yarn workspace @monorepo/ui-components libbuild",
+    "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
     "start": "yarn workspace @monorepo/cra start",
     "storybook": "yarn workspace @monorepo/ui-components storybook",
     "build-storybook": "yarn workspace @monorepo/ui-components build-storybook"
