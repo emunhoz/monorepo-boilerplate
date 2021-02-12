@@ -1,0 +1,33 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-gpr:
+    name: Publish to GPR
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: 'https://registry.npmjs.org'
+      - name: Config git user
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+      - name: Install dependencies
+        run: yarn
+
+      - name: Bump versions
+        run: |
+          yarn version:ci
+        env:
+          GH_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
