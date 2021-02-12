@@ -1,0 +1,15 @@
+{
+  "name": "monorepo-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:emunhoz/monorepo-boilerplate.git",
+  "author": "emunhoz <edermunhozsantos@gmail.com>",
+  "private": true,
+  "workspaces": [
+    "packages/**/*"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
