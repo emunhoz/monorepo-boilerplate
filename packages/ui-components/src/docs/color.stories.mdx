@@ -1,0 +1,43 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
+import createTheme from '@monorepo/design-tokens'
+
+<Meta title="Design System/Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="theme.palette.primary" subtitle="Main" colors={[createTheme.palette.primary]} />
+  <ColorItem title="theme.palette.secondary" subtitle="Blue water" colors={[createTheme.palette.secondary]} />
+  <ColorItem title="theme.palette.tertiary" subtitle="Grey" colors={[createTheme.palette.tertiary]} />
+  <ColorItem title="theme.palette.positive" subtitle="Green" colors={[createTheme.palette.positive]} />
+  <ColorItem title="theme.palette.warning" subtitle="Ochre" colors={[createTheme.palette.warning]} />
+  <ColorItem title="theme.palette.negative" subtitle="Red" colors={[createTheme.palette.negative]} />
+</ColorPalette>
+
+# Brand colors
+
+<ColorPalette>
+  <ColorItem
+    title="Pastel"
+    colors={[
+      createTheme.palette.mountainMist,
+      createTheme.palette.swirl,
+      createTheme.palette.nomad,
+      createTheme.palette.paleOyster,
+    ]}
+  />
+</ColorPalette>
+
+# Monochrome colors
+
+<ColorPalette>
+  <ColorItem title="theme.palette.darkest" colors={[createTheme.palette.darkest]} />
+  <ColorItem title="theme.palette.darker" colors={[createTheme.palette.darker]} />
+  <ColorItem title="theme.palette.dark" colors={[createTheme.palette.dark]} />
+  <ColorItem title="theme.palette.mediumdark" colors={[createTheme.palette.mediumdark]} />
+  <ColorItem title="theme.palette.medium" colors={[createTheme.palette.medium]} />
+  <ColorItem title="theme.palette.mediumlight" colors={[createTheme.palette.mediumlight]} />
+  <ColorItem title="theme.palette.light" colors={[createTheme.palette.light]} />
+  <ColorItem title="theme.palette.lighter" colors={[createTheme.palette.lighter]} />
+  <ColorItem title="theme.palette.lightest" colors={[createTheme.palette.lightest]} />
+</ColorPalette>

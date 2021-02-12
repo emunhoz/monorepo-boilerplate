@@ -11,8 +11,12 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
+    "test:components": "yarn workspace @monorepo/ui-components test",
     "test:app": "yarn workspace @monorepo/cra test",
-    "start": "yarn workspace @monorepo/cra start"
+    "postinstall": "yarn workspace @monorepo/ui-components libbuild",
+    "start": "yarn workspace @monorepo/cra start",
+    "storybook": "yarn workspace @monorepo/ui-components storybook",
+    "build-storybook": "yarn workspace @monorepo/ui-components build-storybook"
   },
   "devDependencies": {
     "lerna": "^3.22.1",

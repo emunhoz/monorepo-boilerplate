@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Component]: Button render component disabled 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-bdfBwQ kMxBQV"
+    disabled=""
+  >
+    Hello world
+  </button>
+</DocumentFragment>
+`;
+
+exports[`[Component]: Button render component with big size style 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-bdfBwQ chhkiQ"
+  >
+    Hello world
+  </button>
+</DocumentFragment>
+`;
+
+exports[`[Component]: Button render component with small size style 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-bdfBwQ esBSOR"
+  >
+    Hello world
+  </button>
+</DocumentFragment>
+`;
+
+exports[`[Component]: Button render ghost style 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-bdfBwQ jxhIFl"
+  >
+    Hello world
+  </button>
+</DocumentFragment>
+`;
+
+exports[`[Component]: Button render negative style 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-bdfBwQ dCAyoC"
+  >
+    Hello world
+  </button>
+</DocumentFragment>
+`;
+
+exports[`[Component]: Button render the component 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-bdfBwQ kMxBQV"
+  >
+    Hello world
+  </button>
+</DocumentFragment>
+`;
