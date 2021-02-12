@@ -1,6 +1,6 @@
 {
   "name": "@monorepo/ui-components",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Monorepo ui components",
   "author": "emunhoz <edermunhozsantos@gmail.com>",
   "license": "ISC",
