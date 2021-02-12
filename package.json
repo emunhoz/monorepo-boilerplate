@@ -16,7 +16,10 @@
     "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
     "start": "yarn workspace @monorepo/cra start",
     "storybook": "yarn workspace @monorepo/ui-components storybook",
-    "build-storybook": "yarn workspace @monorepo/ui-components build-storybook"
+    "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
+    "lint": "yarn workspace @monorepo/ui-components lint && yarn workspace @monorepo/cra lint",
+    "lint:css": "yarn workspace @monorepo/ui-components lint:css && yarn workspace @monorepo/cra lint:css",
+    "test:ci": "yarn workspace @monorepo/ui-components test:coverage && yarn workspace @monorepo/app test:coverage"
   },
   "devDependencies": {
     "lerna": "^3.22.1",
