@@ -10,6 +10,16 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "commitizen": "^4.2.2",
+    "commitlint-config-monorepo": "^1.0.2",
+    "git-commit-msg": "^0.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "@commitlint/config-conventional": "^11.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
