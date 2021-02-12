@@ -1,10 +1,10 @@
 {
   "name": "@monorepo/cra",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "private": true,
   "dependencies": {
     "@monorepo/design-tokens": "^0.1.0",
-    "@monorepo/ui-components": "^0.1.0",
+    "@monorepo/ui-components": "^0.2.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
