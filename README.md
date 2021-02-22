@@ -28,8 +28,8 @@ This is a monorepo repository using [Lerna](https://lerna.js.org/), [Commitzen](
 
 | Name                           | Description                       |
 | ------------------------------ | --------------------------------- |
-| Storybook                      | [Storybook with components](https://monorepo-boilerplate.vercel.app/?path=/docs/)|
-| Design tokens                  | [Design tokens](https://monorepo-boilerplate.vercel.app/?path=/docs/design-system-colors--page)|
+| Storybook                      | [Storybook with components](https://monorepo-boilerplate-storybook.vercel.app/?path=/docs/)|
+| Design tokens                  | [Design tokens](https://monorepo-boilerplate-storybook.vercel.app/?path=/docs/design-system-colors--page)|
 | Create react app package       | [CRA](https://monorepo-boilerplate-cra.vercel.app/) |
 
 ## ⚠️ Requirements
