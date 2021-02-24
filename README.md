@@ -26,11 +26,15 @@ This is a monorepo repository using [Lerna](https://lerna.js.org/), [Commitzen](
 
  ## 🌐 Links
 
-| Name                           | Description                       |
-| ------------------------------ | --------------------------------- |
-| Storybook                      | [Storybook with components](https://monorepo-boilerplate-storybook.vercel.app/?path=/docs/)|
-| Design tokens                  | [Design tokens](https://monorepo-boilerplate-storybook.vercel.app/?path=/docs/design-system-colors--page)|
-| Create react app package       | [CRA](https://monorepo-boilerplate-cra.vercel.app/) |
+Storybook live demo ➡️  https://monorepo-boilerplate-storybook.vercel.app/?path=/docs/
+
+![Storybook](docs/images/ui-components.png)
+
+Design tokens  live demo ➡️  https://monorepo-boilerplate-storybook.vercel.app/?path=/docs/design-system-colors--page
+
+![Design tokens](docs/images/design-tokens.png)
+
+Create React App live demo ➡️  https://monorepo-boilerplate-cra.vercel.app/
 
 ## ⚠️ Requirements
 
