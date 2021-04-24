@@ -14,7 +14,7 @@
   "scripts": {
     "libbuild": "tsc -p .",
     "start": "tsc -p . --watch",
-    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --color",
     "lint:css": "stylelint 'src/**/*.ts' -f verbose --color"
   }
 }

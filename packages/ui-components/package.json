@@ -15,14 +15,13 @@
     "test:update": "jest --config=./jest.config.js --u --colors",
     "test:watch": "jest --config=./jest.config.js --watch --colors",
     "test:coverage": "jest --config=./jest.config.js --coverage --colors",
-    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --color",
     "lint:css": "stylelint 'src/**/*.tsx' -f verbose --color",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c .storybook -o public",
     "generate:component": "plop",
     "libbuild": "tsc -p . && yarn add-assets -w",
-    "add-assets": "copyfiles -u 1 'src/**/!(*.js|*.mdx|*.jsx|*.map|*.ts|*.tsx)' dist/src/",
-    "watch": "tsc && tsc --build tsconfig.esm.json && yarn add-assets -w"
+    "add-assets": "copyfiles -u 1 'src/**/!(*.js|*.mdx|*.jsx|*.map|*.ts|*.tsx)' dist/src/"
   },
   "publishConfig": {
     "access": "public"

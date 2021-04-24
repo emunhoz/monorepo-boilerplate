@@ -17,15 +17,16 @@
     "watch:tokens": "yarn workspace @monorepo/design-tokens start",
     "watch:components": "yarn workspace @monorepo/ui-components start",
     "test:components": "yarn workspace @monorepo/ui-components test",
-    "test:app": "yarn workspace @monorepo/cra test",
+    "test:app": "yarn workspace @monorepo/app test",
+    "test:update": "yarn workspace @voodoo/ui-components test:update && yarn workspace @monorepo/app test:update",
     "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
-    "start": "yarn workspace @monorepo/cra start",
-    "build-app": "yarn workspace @monorepo/cra build",
+    "start": "yarn workspace @monorepo/app start",
+    "build-app": "yarn workspace @monorepo/app build",
     "storybook": "yarn workspace @monorepo/ui-components storybook",
     "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
-    "lint": "yarn workspace @monorepo/ui-components lint && yarn workspace @monorepo/cra lint",
-    "lint:css": "yarn workspace @monorepo/ui-components lint:css && yarn workspace @monorepo/cra lint:css",
-    "test:ci": "yarn workspace @monorepo/ui-components test:coverage && yarn workspace @monorepo/cra test:coverage"
+    "lint": "yarn workspace @monorepo/ui-components lint && yarn workspace @monorepo/app lint",
+    "lint:css": "yarn workspace @monorepo/ui-components lint:css && yarn workspace @monorepo/app lint:css",
+    "test:ci": "yarn workspace @monorepo/ui-components test:coverage && yarn workspace @monorepo/app test:coverage"
   },
   "devDependencies": {
     "lerna": "^3.22.1",
