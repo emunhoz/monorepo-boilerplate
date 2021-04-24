@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/cra",
+  "name": "@monorepo/app",
   "version": "0.3.3",
   "private": true,
   "dependencies": {
@@ -26,9 +26,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:update": "react-scripts test --u --colors --watchAll=false",
     "test:coverage": "react-scripts test --coverage --watchAll=false --verbose=true",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**/*.{js,ts,tsx}'",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --color",
     "lint:css": "stylelint 'src/**/*.tsx' -f verbose --color"
   },
   "eslintConfig": {
