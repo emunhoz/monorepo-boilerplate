@@ -31,7 +31,7 @@
   "devDependencies": {
     "lerna": "^3.22.1",
     "husky": "^4.0.6",
-    "commitizen": "^4.2.2",
+    "commitizen": "4.2.4",
     "commitlint-config-monorepo": "^1.0.2",
     "git-commit-msg": "^0.3.0",
     "cz-conventional-changelog": "^3.3.0",
