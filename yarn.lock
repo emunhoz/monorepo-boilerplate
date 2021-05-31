@@ -7663,10 +7663,10 @@ escodegen@^1.12.0, escodegen@^1.14.1:
   optionalDependencies:
     source-map "~0.6.1"
 
-eslint-config-prettier-standard@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier-standard/-/eslint-config-prettier-standard-4.0.0.tgz#8e9a55f2e2e0fc8850f0bb568770f84d683338e2"
-  integrity sha512-R16mZwU/1qxLe3cEjUl7vrFXRE24SFG4fVouyKdxkXsp8Hrd9fctdcmyCOue9rrksbCU4uZE0oT6DKwsHAJm8g==
+eslint-config-prettier-standard@4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier-standard/-/eslint-config-prettier-standard-4.0.1.tgz#602a888eeef5832bf514e98e461faca5f1ddc40d"
+  integrity sha512-l5IsZo387QArxPcRl6qcsQnc0hf66rrV5p3RvMDcHL9FGXRJ/s3/ZCES343gMGgyYN+XTJpBnwJHCnZegAMmfw==
 
 eslint-config-prettier@^7.2.0:
   version "7.2.0"
