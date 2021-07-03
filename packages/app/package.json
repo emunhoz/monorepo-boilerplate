@@ -5,12 +5,12 @@
   "dependencies": {
     "@monorepo/design-tokens": "^0.1.0",
     "@monorepo/ui-components": "^0.2.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "4.0.2",
-    "styled-components": "^5.2.1",
-    "typescript": "^4.1.2",
-    "web-vitals": "^1.0.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "styled-components": "^5.3.0",
+    "typescript": "^4.3.5",
+    "web-vitals": "^2.1.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -23,11 +23,11 @@
     "@types/styled-components": "^5.1.7"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:update": "react-scripts test --u --colors --watchAll=false",
-    "test:coverage": "react-scripts test --coverage --watchAll=false --verbose=true",
+    "start": "SKIP_PREFLIGHT_CHECK=true react-scripts start",
+    "build": "SKIP_PREFLIGHT_CHECK=true react-scripts build",
+    "test": "SKIP_PREFLIGHT_CHECK=true react-scripts test",
+    "test:update": "SKIP_PREFLIGHT_CHECK=true react-scripts test --u --colors --watchAll=false",
+    "test:coverage": "SKIP_PREFLIGHT_CHECK=true react-scripts test --coverage --watchAll=false --verbose=true",
     "eject": "react-scripts eject",
     "lint": "eslint 'src/**/*.{js,ts,tsx}' --color",
     "lint:css": "stylelint 'src/**/*.tsx' -f verbose --color"
