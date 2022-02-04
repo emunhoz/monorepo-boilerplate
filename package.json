@@ -31,7 +31,7 @@
     "@commitlint/config-conventional": "^16.0.0",
     "@commons/stylelint-config": "*",
     "@semantic-release/changelog": "^6.0.0",
-    "@semantic-release/git": "^10.0.0",
+    "@semantic-release/git": "^10.0.1",
     "commitizen": "^4.2.4",
     "commitlint-config-monorepo": "^2.0.2",
     "cz-conventional-changelog": "^3.3.0",
@@ -52,21 +52,7 @@
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "header-max-length": [
-        300,
-        "always"
-      ],
-      "body-max-line-length": [
-        0,
-        "always"
-      ],
-      "footer-max-line-length": [
-        0,
-        "always"
-      ]
-    }
+    ]
   },
   "release": {
     "branches": [
