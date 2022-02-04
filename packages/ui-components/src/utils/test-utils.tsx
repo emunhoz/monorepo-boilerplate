@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable import/export */
 import React from 'react'
 import createTheme from '@monorepo/design-tokens'
 import { ThemeProvider } from 'styled-components'
