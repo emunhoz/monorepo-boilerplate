@@ -1,0 +1,20 @@
+{
+  "name": "@monorepo/design-tokens",
+  "version": "0.1.0",
+  "description": "Monorepo design tokens",
+  "author": "emunhoz <edermunhozsantos@gmail.com>",
+  "license": "ISC",
+  "main": "dist/index.js",
+  "directories": {
+    "src": "src"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "libbuild": "tsc -p .",
+    "start": "tsc -p . --watch",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --color",
+    "lint:css": "stylelint 'src/**/*.ts' -f verbose --color"
+  }
+}

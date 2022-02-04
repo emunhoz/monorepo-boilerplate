@@ -1,0 +1,103 @@
+{
+  "name": "monorepo-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:emunhoz/monorepo-boilerplate.git",
+  "author": "emunhoz <edermunhozsantos@gmail.com>",
+  "private": true,
+  "homepage": ".",
+  "workspaces": [
+    "packages/**/*"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "commit": "git-cz",
+    "watch:design-tokens": "yarn workspace @monorepo/design-tokens start",
+    "watch:tokens": "yarn workspace @monorepo/design-tokens start",
+    "watch:components": "yarn workspace @monorepo/ui-components start",
+    "test:components": "yarn workspace @monorepo/ui-components test",
+    "test:app": "yarn workspace @monorepo/app test",
+    "test:update": "yarn workspace @monorepo/ui-components test:update && yarn workspace @monorepo/app test:update",
+    "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
+    "start": "yarn workspace @monorepo/app start",
+    "build-app": "yarn workspace @monorepo/app build",
+    "storybook": "yarn workspace @monorepo/ui-components storybook",
+    "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
+    "lint": "yarn workspace @monorepo/ui-components lint && yarn workspace @monorepo/app lint",
+    "lint:css": "yarn workspace @monorepo/ui-components lint:css && yarn workspace @monorepo/app lint:css",
+    "test:ci": "yarn workspace @monorepo/ui-components test:coverage && yarn workspace @monorepo/app test:coverage"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@semantic-release/changelog": "^6.0.0",
+    "@semantic-release/git": "^10.0.0",
+    "@commitlint/config-conventional": "^16.0.0",
+    "@commons/eslint-config": "*",
+    "@commons/stylelint-config": "*",
+    "commitizen": "^4.2.4",
+    "commitlint-config-monorepo": "^2.0.2",
+    "cz-conventional-changelog": "^3.3.0",
+    "git-commit-msg": "^0.3.0",
+    "husky": "^7.0.4",
+    "typescript": "^4.5.5"
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "header-max-length": [
+        300,
+        "always"
+      ],
+      "body-max-line-length": [
+        0,
+        "always"
+      ],
+      "footer-max-line-length": [
+        0,
+        "always"
+      ]
+    }
+  },
+  "release": {
+    "branches": [
+      "+([0-9])?(.{+([0-9]),x}).x",
+      "main",
+      {
+        "name": "beta",
+        "prerelease": true
+      },
+      {
+        "name": "alpha",
+        "prerelease": true
+      }
+    ],
+    "prepare": [
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json",
+          "yarn.lock.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  }
+}

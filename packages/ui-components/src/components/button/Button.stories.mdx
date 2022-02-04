@@ -1,0 +1,55 @@
+import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks'
+
+import { Button, IButton } from './Button.tsx'
+
+<Meta title="Components/Button" component={Button} />
+
+export const Template = (args) => <Button {...args}>Text</Button>
+
+# Button
+
+This is the primary `Button`
+
+```jsx
+import { Button } from '@monorepo/ui-components'
+```
+
+<Preview withSource="open">
+  <Story name="Primary">
+    <Button>Primary</Button>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Button} />
+
+## Negative
+
+<Preview withSource="open">
+  <Story name="Negative">
+    <Button negative>Negative</Button>
+  </Story>
+</Preview>
+
+## Ghost
+
+<Preview withSource="open">
+  <Story name="Ghost">
+    <Button ghost>Text</Button>
+  </Story>
+</Preview>
+
+# Sizes
+
+<Preview withSource="open">
+  <Story name="Small">
+    <Button size="small">Text</Button>
+  </Story>
+  <Story name="Default">
+    <Button>Text</Button>
+  </Story>
+  <Story name="Big">
+    <Button size="big">Text</Button>
+  </Story>
+</Preview>

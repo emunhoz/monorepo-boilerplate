@@ -1,0 +1,63 @@
+{
+  "name": "@monorepo/ui-components",
+  "version": "0.2.0",
+  "description": "Monorepo ui components",
+  "author": "emunhoz <edermunhozsantos@gmail.com>",
+  "license": "ISC",
+  "main": "dist/src/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p ./src",
+    "start": "tsc -p . --watch",
+    "test": "jest --config=./jest.config.js --colors",
+    "test:update": "jest --config=./jest.config.js --u --colors",
+    "test:watch": "jest --config=./jest.config.js --watch --colors",
+    "test:coverage": "jest --config=./jest.config.js --coverage --colors",
+    "lint": "eslint 'src/**/*.{js,ts,tsx}' --color",
+    "lint:css": "stylelint 'src/**/*.tsx' -f verbose --color",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -c .storybook -o public",
+    "generate:component": "plop",
+    "libbuild": "tsc -p . && yarn add-assets -w",
+    "add-assets": "copyfiles -u 1 'src/**/!(*.js|*.mdx|*.jsx|*.map|*.ts|*.tsx)' dist/src/"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^6.1.16",
+    "@storybook/addon-actions": "^6.1.16",
+    "@storybook/addon-controls": "^6.1.16",
+    "@storybook/addon-docs": "^6.1.16",
+    "@storybook/addon-essentials": "^6.1.16",
+    "@storybook/addon-links": "^6.1.16",
+    "@storybook/addon-viewport": "^6.1.16",
+    "@storybook/addons": "^6.1.16",
+    "@storybook/react": "^6.1.16",
+    "@storybook/storybook-deployer": "^2.8.7",
+    "@testing-library/jest-dom": "^5.10.1",
+    "@testing-library/react": "^11.2.2",
+    "@types/jest": "^26.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.7",
+    "@types/styled-components": "^5.1.5",
+    "awesome-typescript-loader": "^5.2.1",
+    "copyfiles": "^2.4.1",
+    "jest": "^26.0.1",
+    "react": "^17.0.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "styled-components": "^5.2.1",
+    "ts-jest": "^26.1.0",
+    "ts-loader": "^8.0.12"
+  },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
+  }
+}

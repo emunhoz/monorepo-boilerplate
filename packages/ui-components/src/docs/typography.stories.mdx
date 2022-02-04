@@ -1,0 +1,61 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks'
+import createTheme from '@monorepo/design-tokens'
+
+<Meta title="Design System/Typography" />
+
+# Typography
+
+**Font:** Roboto
+
+**Sizes:** and **Weights:** 400(regular), 700(bold), 900(extrabold)
+
+**Regular:**
+
+<Typeset
+  fontSizes={[
+    Number(createTheme.typography.size.s1),
+    Number(createTheme.typography.size.s2),
+    Number(createTheme.typography.size.s3),
+    Number(createTheme.typography.size.m1),
+    Number(createTheme.typography.size.m2),
+    Number(createTheme.typography.size.m3),
+    Number(createTheme.typography.size.l1),
+    Number(createTheme.typography.size.l2),
+    Number(createTheme.typography.size.l3),
+  ]}
+  fontWeight={createTheme.typography.weight.regular}
+/>
+
+**Bold:**
+
+<Typeset
+  fontSizes={[
+    Number(createTheme.typography.size.s1),
+    Number(createTheme.typography.size.s2),
+    Number(createTheme.typography.size.s3),
+    Number(createTheme.typography.size.m1),
+    Number(createTheme.typography.size.m2),
+    Number(createTheme.typography.size.m3),
+    Number(createTheme.typography.size.l1),
+    Number(createTheme.typography.size.l2),
+    Number(createTheme.typography.size.l3),
+  ]}
+  fontWeight={createTheme.typography.weight.bold}
+/>
+
+**Extrabold:**
+
+<Typeset
+  fontSizes={[
+    Number(createTheme.typography.size.s1),
+    Number(createTheme.typography.size.s2),
+    Number(createTheme.typography.size.s3),
+    Number(createTheme.typography.size.m1),
+    Number(createTheme.typography.size.m2),
+    Number(createTheme.typography.size.m3),
+    Number(createTheme.typography.size.l1),
+    Number(createTheme.typography.size.l2),
+    Number(createTheme.typography.size.l3),
+  ]}
+  fontWeight={createTheme.typography.weight.extrabold}
+/>
