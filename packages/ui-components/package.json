@@ -20,8 +20,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c .storybook -o public",
     "generate:component": "plop",
-    "libbuild": "tsc -p . && yarn add-assets -w",
-    "add-assets": "copyfiles -u 1 'src/**/!(*.js|*.mdx|*.jsx|*.map|*.ts|*.tsx)' dist/src/"
+    "libbuild": "tsc -p . && npm run add-assets -w",
+    "add-assets": "cpx -u 'src/**/!(*.js|*.mdx|*.jsx|*.map|*.ts|*.tsx)' dist/src/"
   },
   "publishConfig": {
     "access": "public"
@@ -63,5 +63,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "styled-components": "^5.2.1"
+  },
+  "dependencies": {
+    "cpx": "^1.5.0"
   }
 }
