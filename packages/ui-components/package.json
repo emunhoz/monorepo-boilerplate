@@ -20,7 +20,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -c .storybook -o public",
     "generate:component": "plop",
-    "libbuild": "tsc -p . && npm run add-assets -w",
+    "libbuild": "tsc -p . && npm run add-assets",
     "add-assets": "cpx -u 'src/**/!(*.js|*.mdx|*.jsx|*.map|*.ts|*.tsx)' dist/src/"
   },
   "publishConfig": {
