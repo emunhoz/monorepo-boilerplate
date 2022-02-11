@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 16.x
       - name: Install dependencies
-        run: npm install --legacy-peer-deps
+        run: npm install
 
       - name: Build app
         run: npm run build-app
