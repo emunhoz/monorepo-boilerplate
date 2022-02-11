@@ -12,19 +12,21 @@
   "license": "MIT",
   "scripts": {
     "commit": "git-cz",
-    "watch:design-tokens": "yarn workspace @monorepo/design-tokens start",
-    "watch:components": "yarn workspace @monorepo/ui-components start",
-    "test:components": "yarn workspace @monorepo/ui-components test",
-    "test:app": "yarn workspace @monorepo/app test",
-    "test:update": "yarn workspace @monorepo/ui-components test:update && yarn workspace @monorepo/app test:update",
-    "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
-    "start": "yarn workspace @monorepo/app start",
-    "build-app": "yarn workspace @monorepo/app build",
-    "storybook": "yarn workspace @monorepo/ui-components storybook",
-    "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
-    "lint": "yarn workspace @monorepo/ui-components lint && yarn workspace @monorepo/app lint",
-    "lint:css": "yarn workspace @monorepo/ui-components lint:css && yarn workspace @monorepo/app lint:css",
-    "test:ci": "yarn workspace @monorepo/ui-components test:coverage && yarn workspace @monorepo/app test:coverage",
+    "watch:design-tokens": "npm run start --workspace=@monorepo/design-tokens",
+    "watch:ui-components": "npm run start --workspace=@monorepo/ui-components",
+    "watch:components": "npm run watch --workspace=@monorepo/components",
+    "test:components": "npm run test --workspace=@monorepo/ui-components",
+    "test:app": "npm run test --workspace=@monorepo/app",
+    "test:update": "npm run test:update --workspaces --if-present",
+    "postinstall": "npm run libbuild --workspaces --if-present",
+    "start": "npm run start --workspace=@monorepo/app",
+    "build-app": "npm run build --workspace=@monorepo/app",
+    "build-components": "npm run build --workspace=@monorepo/components",
+    "storybook": "npm run storybook --workspace=@monorepo/ui-components",
+    "build-storybook": "npm run build-storybook --workspace=@monorepo/ui-components",
+    "lint": "npm run lint --workspaces --if-present",
+    "lint:css": "npm run lint:css --workspaces --if-present",
+    "test:ci": "npm run test:coverage --workspaces --if-present",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
@@ -63,5 +65,8 @@
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "dependencies": {
+    "react-error-boundary": "^3.1.4"
   }
 }
