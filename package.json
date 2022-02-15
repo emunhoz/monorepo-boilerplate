@@ -41,6 +41,7 @@
     "cz-conventional-changelog": "^3.3.0",
     "git-commit-msg": "^0.3.0",
     "husky": "^7.0.4",
+    "multi-semantic-release": "^2.11.0",
     "semantic-release": "^19.0.2",
     "semantic-release-monorepo": "^7.0.5",
     "typescript": "^4.5.5"
@@ -77,6 +78,7 @@
       "@semantic-release/git",
       "@semantic-release/github"
     ],
+    "noCi": true,
     "prepare": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
