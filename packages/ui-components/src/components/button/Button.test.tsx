@@ -1,5 +1,5 @@
 import React from 'react'
-import { render, fireEvent, screen } from '../../utils/test-utils'
+import { render, fireEvent, screen } from '@commons/theme-test-setup'
 import { Button } from './Button'
 
 describe('[Component]: Button', () => {

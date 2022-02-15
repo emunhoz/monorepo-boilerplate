@@ -1,6 +1,5 @@
-import React from 'react';
-import { render, screen } from './utils/test-utils'
-import App from './App';
+import { render, screen } from "@commons/theme-test-setup"
+import App from './App'
 
 test('renders learn react link', () => {
   render(<App />);
