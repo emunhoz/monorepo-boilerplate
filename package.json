@@ -64,8 +64,11 @@
       }
     ],
     "prepare": [
+      "@semantic-release/release-notes-generator",
       "@semantic-release/changelog",
+      "@semantic-release/github",
       "@semantic-release/npm",
+      "@semantic-release/git",
       {
         "path": "@semantic-release/git",
         "assets": [
