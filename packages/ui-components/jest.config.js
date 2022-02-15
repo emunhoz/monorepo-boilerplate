@@ -19,6 +19,5 @@ module.exports = {
       functions: 80,
       lines: 80
     }
-  },
-  collectCoverage: true
+  }
 }
