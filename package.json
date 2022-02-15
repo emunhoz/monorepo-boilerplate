@@ -36,13 +36,11 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^9.0.0",
-    "@semrel-extra/npm": "^1.2.0",
     "commitizen": "^4.2.4",
     "commitlint-config-monorepo": "^2.0.2",
     "cz-conventional-changelog": "^3.3.0",
     "git-commit-msg": "^0.3.0",
     "husky": "^7.0.4",
-    "multi-semantic-release": "^2.11.0",
     "semantic-release": "^19.0.2",
     "typescript": "^4.5.5"
   },
@@ -73,7 +71,7 @@
           "changelogFile": "CHANGELOG.md"
         }
       ],
-      "@semrel-extra/npm",
+      "@semantic-release/npm",
       "@semantic-release/git",
       "@semantic-release/github"
     ],
