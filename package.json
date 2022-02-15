@@ -43,7 +43,6 @@
     "husky": "^7.0.4",
     "multi-semantic-release": "^2.11.0",
     "semantic-release": "^19.0.2",
-    "semantic-release-monorepo": "^7.0.5",
     "typescript": "^4.5.5"
   },
   "commitlint": {
@@ -52,7 +51,6 @@
     ]
   },
   "release": {
-    "extends": "semantic-release-monorepo",
     "branches": [
       "+([0-9])?(.{+([0-9]),x}).x",
       "main",
