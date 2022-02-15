@@ -36,6 +36,7 @@
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^9.0.0",
+    "@semrel-extra/npm": "^1.2.0",
     "commitizen": "^4.2.4",
     "commitlint-config-monorepo": "^2.0.2",
     "cz-conventional-changelog": "^3.3.0",
@@ -72,7 +73,7 @@
           "changelogFile": "CHANGELOG.md"
         }
       ],
-      "@semantic-release/npm",
+      "@semrel-extra/npm",
       "@semantic-release/git",
       "@semantic-release/github"
     ],
