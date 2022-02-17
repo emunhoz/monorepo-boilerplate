@@ -6,25 +6,18 @@ on:
       - main
 
 jobs:
-  publish:
-    name: Publish to GPR
+  release:
+    name: Release
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          persist-credentials: false
 
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
           node-version: 16.x
-          registry-url: 'https://registry.npmjs.org'
-
-      - name: Config git user
-        run: |
-          git config --global user.name "${{ github.actor }}"
-          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
-
       - name: Install dependencies
         run: npm install
 
@@ -33,10 +26,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
-
-      - name: Bump versions
-        run: |
-          npm run version:ci
-        env:
-          GH_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
