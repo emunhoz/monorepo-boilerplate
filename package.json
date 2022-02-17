@@ -13,7 +13,7 @@
   "scripts": {
     "commit": "git-cz",
     "publish:ci": "lerna publish from-package --yes --no-verify-registry --no-verify-access && git add -u .",
-    "version:ci": "lerna version --yes --conventional-commits --create-release github --message 'chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}'",
+    "version:ci": "lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'",
     "watch:design-tokens": "npm run start --workspace=@monorepo/design-tokens",
     "watch:ui-components": "npm run start --workspace=@monorepo/ui-components",
     "watch:components": "npm run watch --workspace=@monorepo/components",
