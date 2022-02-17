@@ -1,6 +1,6 @@
 {
   "name": "monorepo-boilerplate",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "main": "index.js",
   "repository": "git@github.com:emunhoz/monorepo-boilerplate.git",
   "author": "emunhoz <edermunhozsantos@gmail.com>",
@@ -30,9 +30,10 @@
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
-    "@commitlint/cli": "^13.2.1",
-    "@commitlint/config-conventional": "^16.0.0",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
     "@commons/stylelint-config": "*",
+    "@jedmao/semantic-release-npm-github-config": "^1.0.9",
     "@semantic-release/changelog": "^6.0.1",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/npm": "^9.0.0",
@@ -42,7 +43,6 @@
     "git-commit-msg": "^0.3.0",
     "husky": "^7.0.4",
     "semantic-release": "^19.0.2",
-    "semantic-release-monorepo": "^7.0.5",
     "typescript": "^4.5.5"
   },
   "commitlint": {
@@ -51,7 +51,7 @@
     ]
   },
   "release": {
-    "extends": "semantic-release-monorepo",
+    "extends": "@jedmao/semantic-release-npm-github-config",
     "branches": [
       "+([0-9])?(.{+([0-9]),x}).x",
       "main",
@@ -64,22 +64,25 @@
         "prerelease": true
       }
     ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      [
-        "@semantic-release/changelog",
-        {
-          "changelogFile": "CHANGELOG.md"
-        }
-      ],
-      "@semantic-release/npm",
-      "@semantic-release/git",
-      "@semantic-release/github"
-    ],
     "prepare": [
       "@semantic-release/changelog",
       "@semantic-release/npm"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      "@semantic-release/git",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json",
+          "package-lock.json",
+          "CHANGELOG.md"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
     ]
   },
   "husky": {
