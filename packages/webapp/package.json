@@ -1,10 +1,10 @@
 {
   "name": "@monorepo/app",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@monorepo/design-tokens": "0.0.1",
-    "@monorepo/ui-components": "0.0.1",
+    "@monorepo/design-tokens": "^0.1.0",
+    "@monorepo/ui-components": "^0.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
@@ -42,10 +42,10 @@
     ]
   },
   "devDependencies": {
+    "@commons/theme-test-setup": "^0.1.0",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
-    "@commons/theme-test-setup": "0.0.1",
     "@types/jest": "^27.4.0",
     "@types/node": "^16.11.21",
     "@types/react": "^17.0.38",

@@ -1,6 +1,6 @@
 {
   "name": "@monorepo/ui-components",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Monorepo ui components",
   "author": "emunhoz <edermunhozsantos@gmail.com>",
   "license": "ISC",
@@ -27,6 +27,7 @@
     "access": "public"
   },
   "devDependencies": {
+    "@commons/theme-test-setup": "^0.1.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -35,7 +36,6 @@
     "@storybook/manager-webpack5": "^6.5.0-alpha.39",
     "@storybook/react": "^6.4.19",
     "@storybook/testing-library": "^0.0.9",
-    "@commons/theme-test-setup": "0.0.1",
     "@testing-library/jest-dom": "^5.10.1",
     "@testing-library/react": "^11.2.2",
     "@types/jest": "^26.0.0",
