@@ -1,6 +1,6 @@
 {
   "name": "monorepo-boilerplate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:emunhoz/monorepo-boilerplate.git",
   "author": "emunhoz <edermunhozsantos@gmail.com>",
@@ -27,7 +27,11 @@
     "lint": "npm run lint --workspaces --if-present",
     "lint:css": "npm run lint:css --workspaces --if-present",
     "test:ci": "npm run test:coverage --workspaces --if-present",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
@@ -43,6 +47,7 @@
     "git-commit-msg": "^0.3.0",
     "husky": "^7.0.4",
     "semantic-release": "^19.0.2",
+    "standard-version": "^9.3.2",
     "typescript": "^4.5.5"
   },
   "commitlint": {
