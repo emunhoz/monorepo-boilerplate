@@ -4,7 +4,7 @@
   "main": "index.tsx",
   "license": "MIT",
   "dependencies": {
-    "@monorepo/design-tokens": "^0.1.0",
+    "@monorepo/design-tokens": "0.0.1",
     "react": "^17.0.2",
     "styled-components": "^5.3.3"
   },
