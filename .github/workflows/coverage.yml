@@ -19,8 +19,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Comment with Test Coverage
-        uses: dkershner6/jest-coverage-commenter-action@v1
+        uses: mattallty/jest-github-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
         with:
-          github_token: "${{ secrets.GH_MONOREPO_TOKEN }}"
-          test_command: "npm run test:ci"
+          test-command: "npm run test:ci"
