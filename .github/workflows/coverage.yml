@@ -20,8 +20,7 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        uses: ArtiomTr/jest-coverage-report-action@v2
+        uses: raulanatol/jest-coverage-comment-action@main
         with:
           github-token: ${{ secrets.GH_MONOREPO_TOKEN }}
-          test-script: "npm run test:ci --outputFile=report.json"
-
+          jest-command: 'npm run test:ci'
