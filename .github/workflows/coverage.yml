@@ -23,5 +23,5 @@ jobs:
         uses: ArtiomTr/jest-coverage-report-action@v2
         with:
           github-token: ${{ secrets.GH_MONOREPO_TOKEN }}
-          test-script: "npm run test:ci"
+          test-script: "npm run test:ci --outputFile=report.json"
 
