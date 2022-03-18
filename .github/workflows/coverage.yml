@@ -19,7 +19,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-        uses: mattallty/jest-github-action@v1
+      - uses: mattallty/jest-github-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
         with:
