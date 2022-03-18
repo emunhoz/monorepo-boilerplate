@@ -20,8 +20,8 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        uses: ziishaned/jest-reporter-action@v0.0.1
+        uses: ArtiomTr/jest-coverage-report-action@v2
         with:
           github-token: ${{ secrets.GH_MONOREPO_TOKEN }}
-          test-command: "npm run test:ci"
+          test-script: "npm run test:ci"
 
