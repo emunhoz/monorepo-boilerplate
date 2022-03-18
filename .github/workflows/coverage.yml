@@ -20,10 +20,8 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        run: npm run test:ci --json --outputFile=/home/runner/work/_actions/mattallty/jest-github-action/v1/dist/jest.results.json
-      - uses: mattallty/jest-github-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
+        uses: ziishaned/jest-reporter-action@v0.0.1
         with:
-          test-command: 'echo done'
+          github-token: ${{ secrets.GH_MONOREPO_TOKEN }}
+          test-command: "npm run test:ci"
 
