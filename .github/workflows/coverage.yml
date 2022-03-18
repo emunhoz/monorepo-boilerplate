@@ -19,8 +19,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Run Tests
+        run: npm run test:ci --json --outputFile=/home/runner/work/_actions/mattallty/jest-github-action/v1/dist/jest.results.json
       - uses: mattallty/jest-github-action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
         with:
-          test-command: "npm run test:ci"
+          test-command: 'echo done'
+
