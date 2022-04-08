@@ -22,6 +22,14 @@ This is a monorepo repository using [npm workspaces](https://docs.npmjs.com/cli/
 - 🔥 Hot Reload all Apps, Components & Storybooks
 - 👨‍🔬 Test all workspaces with Eslint & Jest using one command
 
+## 🌐 Samples
+
+*Spotifood*
+Repo: https://github.com/emunhoz/spotifood
+
+*Find movies*
+Repo: https://github.com/emunhoz/find-movies
+
 ## 🌐 Links
 
 Storybook live demo:
