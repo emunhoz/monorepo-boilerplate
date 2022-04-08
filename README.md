@@ -24,11 +24,11 @@ This is a monorepo repository using [npm workspaces](https://docs.npmjs.com/cli/
 
 ## 🌐 Samples
 
-*Spotifood*
-Repo: https://github.com/emunhoz/spotifood
+#### Spotifood
+Code: https://github.com/emunhoz/spotifood
 
-*Find movies*
-Repo: https://github.com/emunhoz/find-movies
+#### Find movies
+Code: https://github.com/emunhoz/find-movies
 
 ## 🌐 Links
 
