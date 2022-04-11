@@ -2,6 +2,7 @@
   "name": "@commons/stylelint-config",
   "version": "0.1.0",
   "main": ".stylelintrc.js",
+  "private": true,
   "license": "MIT",
   "devDependencies": {
     "stylelint": "^13.8.0",

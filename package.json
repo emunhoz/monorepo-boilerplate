@@ -13,20 +13,19 @@
   "scripts": {
     "commit": "git-cz",
     "watch:design-tokens": "npm run start --workspace=@monorepo/design-tokens",
-    "watch:ui-components": "npm run start --workspace=@monorepo/ui-components",
-    "watch:components": "npm run watch --workspace=@monorepo/components",
-    "test:components": "npm run test --workspace=@monorepo/ui-components",
+    "watch:components": "npm run start --workspace=@monorepo/components",
+    "test:components": "npm run test --workspace=@monorepo/components",
     "test:app": "npm run test --workspace=@monorepo/app",
-    "test:update": "npm run test:update --workspaces --if-present",
-    "postinstall": "npm run libbuild --workspaces --if-present",
+    "test:update": "npm run test:update --ws --if-present",
+    "postinstall": "npm run libbuild --ws --if-present",
     "start": "npm run start --workspace=@monorepo/app",
     "build-app": "npm run build --workspace=@monorepo/app",
     "build-components": "npm run build --workspace=@monorepo/components",
-    "storybook": "npm run storybook --workspace=@monorepo/ui-components",
-    "build-storybook": "npm run build-storybook --workspace=@monorepo/ui-components",
-    "lint": "npm run lint --workspaces --if-present",
-    "lint:css": "npm run lint:css --workspaces --if-present",
-    "test:ci": "npm run test:coverage --workspaces --if-present",
+    "storybook": "npm run storybook --workspace=@monorepo/components",
+    "build-storybook": "npm run build-storybook --workspace=@monorepo/components",
+    "lint": "npm run lint --ws --if-present",
+    "lint:css": "npm run lint:css --ws --if-present",
+    "test:ci": "npm run test:coverage --ws --if-present",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
@@ -41,9 +40,10 @@
     "cz-conventional-changelog": "^3.3.0",
     "git-commit-msg": "^0.3.0",
     "husky": "^7.0.4",
+    "prettier": "^2.6.2",
     "semantic-release": "^19.0.2",
     "standard-version": "^9.3.2",
-    "typescript": "^4.5.5"
+    "typescript": "^4.6.3"
   },
   "commitlint": {
     "extends": [
