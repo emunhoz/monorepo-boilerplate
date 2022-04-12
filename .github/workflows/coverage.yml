@@ -20,7 +20,7 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        uses: raulanatol/jest-coverage-comment-action@main
+        uses: ziishaned/jest-reporter-action@v0.0.1
         with:
           github-token: ${{ secrets.GH_MONOREPO_TOKEN }}
-          jest-command: 'npm run test:ci'
+          test-command: 'npm run test:ci'
