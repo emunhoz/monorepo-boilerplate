@@ -20,8 +20,7 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        uses: mattallty/jest-github-action@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
+        uses: ArtiomTr/jest-coverage-report-action@v2
         with:
-          test-command: 'npm run test:ci'
+          github-token: ${{ secrets.GH_MONOREPO_TOKEN }}
+          test-script: 'npm run test:ci'
