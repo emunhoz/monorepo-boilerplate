@@ -18,6 +18,7 @@
     "test:update": "lerna run --parallel test:update",
     "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
     "start:web": "yarn workspace @monorepo/web start",
+    "start:server": "yarn workspace @monorepo/server start",
     "build-app": "yarn workspace @monorepo/web build",
     "storybook": "yarn workspace @monorepo/ui-components storybook",
     "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
