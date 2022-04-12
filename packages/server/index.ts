@@ -1,4 +1,5 @@
 import express from "express";
+import product from './api/product';
 const app = express();
 const port = 3003;
 
@@ -14,7 +15,9 @@ app.use((_req: any, res: { setHeader: (arg0: string, arg1: string) => void; }, n
   next();
 });
 
-app.get("/", (_req: any, res: { json: (arg0: QueryPayload) => void; }) => {
+app.use("/api/product", product);
+
+app.get("/api/", (_req: any, res: { json: (arg0: QueryPayload) => void; }) => {
   const responseData: QueryPayload = {
     payload: 'Hi there'
   };

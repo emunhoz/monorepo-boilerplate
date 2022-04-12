@@ -24,7 +24,7 @@ function App() {
           primary
           size='small'
           onClick={() => {
-            fetch("http://localhost:3003", {})
+            fetch("http://localhost:3003/api/product", {})
               .then((response) => response.json())
               .then((data) => console.log(data));
           }}
