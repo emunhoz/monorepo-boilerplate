@@ -20,7 +20,4 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        uses: ArtiomTr/jest-coverage-report-action@v2
-        with:
-          github-token: ${{ secrets.GH_MONOREPO_TOKEN }}
-          test-script: 'npm run test:ci'
+        run: npm run test:ci
