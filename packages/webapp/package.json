@@ -28,12 +28,13 @@
     "test:update": "react-scripts test --u --colors",
     "test:watch": "react-scripts test --watch --colors",
     "test:coverage": "react-scripts test --coverage --colors --watchAll=false",
-    "lint": "eslint ./src --max-warnings=0 --color",
+    "lint": "eslint './src/**/*.{ts,tsx}' --max-warnings=0 --color",
     "lint:css": "stylelint 'src/**/*.tsx' -f verbose --color",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
+      "react-app",
       "react-app/jest"
     ]
   },
