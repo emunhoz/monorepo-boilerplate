@@ -4,8 +4,6 @@ import logo from './logo.svg';
 
 const { REACT_APP_API } = process.env
 
-console.log(REACT_APP_API, 'REACT_APP_API')
-
 function App() {
   return (
     <div className="App">
