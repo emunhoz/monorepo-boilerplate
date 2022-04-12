@@ -30,6 +30,10 @@
   },
   "keywords": [],
   "author": "",
+  "jest": {
+    "testEnvironment": "jsdom",
+    "testMatch": ["<rootDir>/src/**/?(*.)+(test).ts?(x)"]
+  },
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.17.9",
