@@ -1,6 +1,6 @@
-import { Button } from "@monorepo/components"
-import './App.css'
-import logo from './logo.svg'
+import { Button } from '@monorepo/components';
+import './App.css';
+import logo from './logo.svg';
 
 function App() {
   return (
@@ -18,10 +18,10 @@ function App() {
         >
           Learn React
         </a>
-        <Button primary size={"small"} label={"Hello"} onClick={() => console.log('hi there')} />
+        <Button primary size={'small'} label={'Hello there'} onClick={() => console.log('hello there')} />
       </header>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
