@@ -5,9 +5,9 @@
   "description": "Monorepo design tokens",
   "author": "emunhoz <edermunhozsantos@gmail.com>",
   "license": "ISC",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "directories": {
     "src": "src"
   },

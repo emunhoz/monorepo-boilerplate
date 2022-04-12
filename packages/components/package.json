@@ -3,9 +3,9 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "./lib/cjs/index.js",
-  "module": "./lib/esm/index.js",
-  "types": "./lib/esm/index.d.ts",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
   "scripts": {
     "test": "jest",
     "test:update": "jest --u --colors",
@@ -64,6 +64,6 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@monorepo/design-tokens": "0.1.0"
+    "@monorepo/design-tokens": "*"
   }
 }
