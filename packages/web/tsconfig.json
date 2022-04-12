@@ -18,12 +18,7 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "paths": {
-      "@monorepo/components": [
-        "../components"
-      ]
-    }
+    "jsx": "react-jsx"
   },
   "include": [
     "src"

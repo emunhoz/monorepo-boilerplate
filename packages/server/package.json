@@ -1,0 +1,16 @@
+{
+  "name": "@monorepo/server",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "tsc && node dist/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^16.2.1",
+    "@types/express": "^4.17.13"
+  }
+}

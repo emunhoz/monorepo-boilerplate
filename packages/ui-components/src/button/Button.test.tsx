@@ -1,4 +1,4 @@
-import { render, screen } from "@commons/theme-test-setup"
+import { render, screen } from "../configs/test-utils"
 import { Button } from "./Button"
 
 test("Header contains correct text", () => {

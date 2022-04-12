@@ -1,86 +1,45 @@
 {
   "name": "monorepo-boilerplate",
-  "version": "0.0.1",
-  "repository": "git@github.com:emunhoz/monorepo-boilerplate.git",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/emunhoz/monorepo-boilerplate.git",
   "author": "emunhoz <edermunhozsantos@gmail.com>",
+  "license": "MIT",
   "private": true,
   "workspaces": [
     "packages/**/*"
   ],
-  "license": "MIT",
   "scripts": {
+    "start": "lerna run --parallel start",
     "commit": "git-cz",
-    "watch:design-tokens": "npm run start --workspace=@monorepo/design-tokens",
-    "watch:components": "npm run start --workspace=@monorepo/components",
-    "test:components": "npm run test --workspace=@monorepo/components",
-    "test:app": "npm run test --workspace=@monorepo/web",
-    "test:update": "npm run test:update --ws --if-present",
-    "postinstall": "npm run libbuild --ws --if-present",
-    "start": "npm run start --workspace=@monorepo/web",
-    "build-app": "npm run build --workspace=@monorepo/web",
-    "build-components": "npm run build --workspace=@monorepo/components",
-    "storybook": "npm run storybook --workspace=@monorepo/components",
-    "build-storybook": "npm run build-storybook --workspace=@monorepo/components",
-    "lint": "npm run lint --ws --if-present",
-    "lint:css": "npm run lint:css --ws --if-present",
-    "test:ci": "npm run test:coverage --workspace=@monorepo/components && npm run test:coverage --workspace=@monorepo/web",
-    "semantic-release": "semantic-release"
+    "publish:ci": "lerna publish from-package --yes --no-verify-registry --no-verify-access && git add -u .",
+    "version:ci": "lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'",
+    "watch": "lerna run --parallel watch",
+    "test:update": "lerna run --parallel test:update",
+    "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
+    "start:web": "yarn workspace @monorepo/web start",
+    "build-app": "yarn workspace @monorepo/web build",
+    "storybook": "yarn workspace @monorepo/ui-components storybook",
+    "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
+    "lint": "lerna run --parallel lint",
+    "lint:css": "lerna run --parallel lint:css",
+    "test:ci": "lerna run --parallel test:coverage"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
-    "@commitlint/config-conventional": "^16.2.1",
+    "lerna": "^4.0.0",
+    "typescript": "^4.6.3",
+    "@commitlint/config-conventional": "^12.1.4",
     "@commons/stylelint-config": "*",
-    "@semantic-release/changelog": "^6.0.1",
-    "@semantic-release/git": "^10.0.1",
-    "@semantic-release/npm": "^9.0.0",
-    "commitizen": "^4.2.4",
+    "commitizen": "^4.2.2",
     "commitlint-config-monorepo": "^2.0.2",
     "cz-conventional-changelog": "^3.3.0",
     "git-commit-msg": "^0.3.0",
-    "husky": "^7.0.4",
-    "prettier": "^2.6.2",
-    "semantic-release": "^19.0.2",
-    "standard-version": "^9.3.2",
-    "typescript": "^4.6.3"
+    "husky": "^6.0.0"
   },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "release": {
-    "branches": [
-      "+([0-9])?(.{+([0-9]),x}).x",
-      "main",
-      {
-        "name": "beta",
-        "prerelease": true
-      },
-      {
-        "name": "alpha",
-        "prerelease": true
-      }
-    ],
-    "prepare": [
-      "@semantic-release/changelog",
-      "@semantic-release/npm"
-    ],
-    "plugins": [
-      "@semantic-release/commit-analyzer",
-      "@semantic-release/release-notes-generator",
-      "@semantic-release/changelog",
-      "@semantic-release/npm",
-      "@semantic-release/git",
-      {
-        "path": "@semantic-release/git",
-        "assets": [
-          "package.json",
-          "package-lock.json",
-          "CHANGELOG.md"
-        ],
-        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
-      }
-    ]
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   },
   "husky": {
     "hooks": {

@@ -1,7 +1,7 @@
 {
-  "name": "@monorepo/components",
+  "name": "@monorepo/ui-components",
   "private": true,
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -14,8 +14,8 @@
     "test:update": "jest --u --colors",
     "test:watch": "jest --watch --colors",
     "test:coverage": "jest --coverage --colors",
-    "start": "tsc -p . --watch",
-    "build": "rm -rf lib && npm run build:esm && npm run build:cjs && npm run add-assets",
+    "watch": "tsc -p . --watch",
+    "libbuild": "rm -rf lib && yarn build:esm && yarn build:cjs && yarn add-assets",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir lib/cjs",
     "storybook": "start-storybook -p 6006",
@@ -32,7 +32,9 @@
   "author": "",
   "jest": {
     "testEnvironment": "jsdom",
-    "testMatch": ["<rootDir>/src/**/?(*.)+(test).ts?(x)"]
+    "testMatch": [
+      "<rootDir>/src/**/?(*.)+(test).ts?(x)"
+    ]
   },
   "license": "ISC",
   "devDependencies": {
@@ -40,6 +42,7 @@
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
     "@babel/preset-typescript": "^7.16.7",
+    "@commitlint/config-conventional": "^16.2.1",
     "@storybook/addon-actions": "^6.4.20",
     "@storybook/addon-essentials": "^6.4.20",
     "@storybook/addon-interactions": "^6.4.20",
@@ -48,26 +51,30 @@
     "@storybook/manager-webpack5": "^6.5.0-alpha.39",
     "@storybook/react": "^6.4.20",
     "@storybook/testing-library": "^0.0.9",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.0",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.18.0",
-    "@typescript-eslint/parser": "^5.18.0",
-    "@commons/theme-test-setup": "^0.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
     "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.4",
     "cpx": "^1.5.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.29.4",
+    "react-dom": "^17.0.2",
     "webpack": "^5.68.0"
   },
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@monorepo/design-tokens": "*"
+    "@monorepo/design-tokens": "^0.0.1"
   }
 }

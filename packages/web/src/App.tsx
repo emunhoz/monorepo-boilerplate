@@ -1,4 +1,4 @@
-import { Button } from '@monorepo/components';
+import { Button } from '@monorepo/ui-components';
 import './App.css';
 import logo from './logo.svg';
 
@@ -18,7 +18,17 @@ function App() {
         >
           Learn React
         </a>
-        <Button primary size={'small'} label={'Hello there'} onClick={() => console.log('hello there')} />
+
+        <Button
+          label='Get some data'
+          primary
+          size='small'
+          onClick={() => {
+            fetch("http://localhost:3003", {})
+              .then((response) => response.json())
+              .then((data) => console.log(data));
+          }}
+        />
       </header>
     </div>
   );

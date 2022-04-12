@@ -1,7 +1,7 @@
 {
   "name": "@monorepo/design-tokens",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.0.1",
   "description": "Monorepo design tokens",
   "author": "emunhoz <edermunhozsantos@gmail.com>",
   "license": "ISC",
@@ -16,6 +16,9 @@
   ],
   "scripts": {
     "libbuild": "tsc -p .",
-    "start": "tsc -p . --watch"
+    "watch": "tsc -p . --watch"
+  },
+  "devDependencies": {
+    "@commitlint/config-conventional": "^16.2.1"
   }
 }
