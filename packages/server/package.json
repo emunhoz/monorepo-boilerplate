@@ -4,8 +4,8 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "npx tsc -w",
-    "dev": "npx nodemon"
+    "watch": "npx tsc -w",
+    "start": "npx nodemon"
   },
   "dependencies": {
     "express": "^4.17.3",

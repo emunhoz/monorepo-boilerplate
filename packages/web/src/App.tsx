@@ -2,6 +2,10 @@ import { Button } from '@monorepo/ui-components';
 import './App.css';
 import logo from './logo.svg';
 
+const { REACT_APP_API } = process.env
+
+console.log(REACT_APP_API, 'REACT_APP_API')
+
 function App() {
   return (
     <div className="App">
@@ -24,7 +28,7 @@ function App() {
           primary
           size='small'
           onClick={() => {
-            fetch("http://localhost:3003/api/product", {})
+            fetch(`${REACT_APP_API}/api/product`, {})
               .then((response) => response.json())
               .then((data) => console.log(data));
           }}
