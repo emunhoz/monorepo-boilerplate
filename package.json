@@ -23,7 +23,7 @@
     "build-storybook": "npm run build-storybook --workspace=@monorepo/components",
     "lint": "npm run lint --ws --if-present",
     "lint:css": "npm run lint:css --ws --if-present",
-    "test:ci": "npm run test:coverage --ws --if-present",
+    "test:ci": "npm run test:coverage --workspace=@monorepo/components && npm run test:coverage --workspace=@monorepo/app",
     "semantic-release": "semantic-release"
   },
   "devDependencies": {
