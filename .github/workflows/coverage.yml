@@ -11,15 +11,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          persist-credentials: false
+          fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v2
+      - uses: actions/setup-node@v1
         with:
-          node-version: 16.x
-
+          node-version: 12
       - name: Install dependencies
-        run: npm install
+        run: yarn
 
-      - name: Run Tests
-        run: yarn test:ci
+      - name: Tests coverage
+        run: |
+          yarn test:ci
