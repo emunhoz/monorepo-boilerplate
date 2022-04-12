@@ -20,7 +20,8 @@ jobs:
         run: npm install
 
       - name: Run Tests
-        uses: ziishaned/jest-reporter-action@v0.0.1
+        uses: mattallty/jest-github-action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_MONOREPO_TOKEN }}
         with:
-          github-token: ${{ secrets.GH_MONOREPO_TOKEN }}
           test-command: 'npm run test:ci'
