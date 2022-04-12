@@ -1,7 +1,7 @@
 {
   "name": "@commons/theme-test-setup",
   "version": "0.1.0",
-  "main": "index.tsx",
+  "main": "index.js",
   "license": "MIT",
   "private": true,
   "dependencies": {
