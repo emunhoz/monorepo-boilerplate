@@ -1,5 +1,9 @@
 export interface Palette {
-  primary: string
+  primary: {
+    main: string
+    light: string
+    dark: string
+  }
   secondary: string
   tertiary: string
 
@@ -29,7 +33,11 @@ export interface Palette {
 }
 
 export const palette: Palette = {
-  primary: '#7264d6',
+  primary: {
+    main: '#7264d6',
+    light: '#bcb3ff',
+    dark: '#3e3295',
+  },
   secondary: '#1EA7FD',
   tertiary: '#DDDDDD',
 
