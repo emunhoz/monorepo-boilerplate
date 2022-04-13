@@ -1,7 +1,7 @@
 {
   "name": "@monorepo/ui-components",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.7",
   "description": "",
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
@@ -74,6 +74,6 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
-    "@monorepo/design-tokens": "^0.1.1"
+    "@monorepo/design-tokens": "^0.1.7"
   }
 }
