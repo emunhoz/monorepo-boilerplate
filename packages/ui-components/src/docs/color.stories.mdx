@@ -1,0 +1,24 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
+import createTheme from '@monorepo/design-tokens'
+
+<Meta title="Design System/Colors" />
+
+# Colors
+
+<ColorPalette>
+  <ColorItem title="theme.palette.primary.dark" subtitle="Primary dark" colors={[createTheme.palette.primary.dark]} />
+  <ColorItem title="theme.palette.primary.main" subtitle="Primary" colors={[createTheme.palette.primary.main]} />
+  <ColorItem title="theme.palette.primary.light" subtitle="Primary light" colors={[createTheme.palette.primary.light]} />
+</ColorPalette>
+
+# Monochrome colors
+
+<ColorPalette>
+  <ColorItem title="theme.palette.darkest" colors={[createTheme.palette.darkest]} />
+  <ColorItem title="theme.palette.darker" colors={[createTheme.palette.darker]} />
+  <ColorItem title="theme.palette.dark" colors={[createTheme.palette.dark]} />
+  <ColorItem title="theme.palette.mediumlight" colors={[createTheme.palette.mediumlight]} />
+  <ColorItem title="theme.palette.light" colors={[createTheme.palette.light]} />
+  <ColorItem title="theme.palette.lighter" colors={[createTheme.palette.lighter]} />
+  <ColorItem title="theme.palette.lightest" colors={[createTheme.palette.lightest]} />
+</ColorPalette>
