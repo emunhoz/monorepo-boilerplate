@@ -11,7 +11,7 @@ export const ButtonWrapper = styled.button`
 
   &.storybook-button--primary {
     color: ${({ theme }) => theme.palette.light};
-    background-color: ${({ theme }) => theme.palette.primary};
+    background-color: ${({ theme }) => theme.palette.primary.main};
   }
 
   &.storybook-button--secondary {
