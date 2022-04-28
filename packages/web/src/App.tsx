@@ -1,12 +1,34 @@
 import { Button } from '@monorepo/ui-components';
+import { useState } from 'react';
 import './App.css';
 import logo from './logo.svg';
 
 const { REACT_APP_API } = process.env
 
 function App() {
+  const [data, setData] = useState<any>([])
+  const [isLoading, setLoading] = useState<boolean>(false)
+
+  function getData() {
+    setLoading(true)
+    try {
+      fetch(`${REACT_APP_API}/api/product`, {})
+        .then((response) => response.json())
+        .then((data) => {
+          setData(data)
+          console.log(data)
+        });
+    } catch (error) {
+      console.error(error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
   return (
     <div className="App">
+      {data.length !== 0 && <p>{data?.message}</p>}
+      {isLoading && <p>Loading...</p>}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -21,15 +43,13 @@ function App() {
           Learn React
         </a>
 
+        <br />
+
         <Button
-          label='Get some data'
+          label='Get data from api'
           primary
-          size='small'
-          onClick={() => {
-            fetch(`${REACT_APP_API}/api/product`, {})
-              .then((response) => response.json())
-              .then((data) => console.log(data));
-          }}
+          size='large'
+          onClick={getData}
         />
       </header>
     </div>

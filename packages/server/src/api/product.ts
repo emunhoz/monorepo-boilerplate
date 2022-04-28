@@ -10,7 +10,7 @@ router.get("/", async (req: any, res: { json: (arg0: { status: number; message: 
   try {
     res.json({
       status: 200,
-      message: "Get data has successfully",
+      message: "Data loaded from API successfully!",
     });
   } catch (error) {
     console.error(error);
