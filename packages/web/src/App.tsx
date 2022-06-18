@@ -9,10 +9,10 @@ function App() {
   const [data, setData] = useState<any>([])
   const [isLoading, setLoading] = useState<boolean>(false)
 
-  function getData() {
+  async function getData() {
     setLoading(true)
     try {
-      fetch(`${REACT_APP_API}/api/product`, {})
+      await fetch(`${REACT_APP_API}/api/product`, {})
         .then((response) => response.json())
         .then((data) => {
           setData(data)

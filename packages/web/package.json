@@ -15,7 +15,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start:create-react-app": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "test:update": "react-scripts test --u --colors --watchAll=false",
