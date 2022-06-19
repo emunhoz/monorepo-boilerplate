@@ -1,18 +1,16 @@
-import { Button } from '@monorepo/ui-components';
-import { useState } from 'react';
-import './App.css';
-import logo from './logo.svg';
-
-const { REACT_APP_API } = process.env
+import { useState } from 'react'
+import './App.css'
+import logo from './logo.svg'
 
 function App() {
+  const [count, setCount] = useState(0)
   const [data, setData] = useState<any>([])
   const [isLoading, setLoading] = useState<boolean>(false)
 
   async function getData() {
     setLoading(true)
     try {
-      await fetch(`${REACT_APP_API}/api/product`, {})
+      await fetch(`http://localhost:3003/api/product`, {})
         .then((response) => response.json())
         .then((data) => {
           setData(data)
@@ -27,33 +25,42 @@ function App() {
 
   return (
     <div className="App">
-      {data.length !== 0 && <p>{data?.message}</p>}
-      {isLoading && <p>Loading...</p>}
       <header className="App-header">
+        {data.length !== 0 && <p>{data?.message}</p>}
+        {isLoading && <p>Loading...</p>}
         <img src={logo} className="App-logo" alt="logo" />
+        <p>Hello Vite + React!</p>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          <button type="button" onClick={() => setCount((count) => count + 1)}>
+            count is: {count}
+          </button>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-
-        <br />
-
-        <Button
-          label='Get data from api'
-          primary
-          size='large'
-          onClick={getData}
-        />
+        <p>
+          Edit <code>App.tsx</code> and save to test HMR updates.
+        </p>
+        <p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+          {' | '}
+          <a
+            className="App-link"
+            href="https://vitejs.dev/guide/features.html"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Vite Docs
+          </a>
+        </p>
+        <button onClick={getData}>Get data from api</button>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
