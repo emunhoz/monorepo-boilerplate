@@ -1,79 +1,57 @@
 {
   "name": "@monorepo/ui-components",
   "private": true,
-  "version": "0.1.8",
-  "description": "",
-  "main": "lib/cjs/index.js",
-  "module": "lib/esm/index.js",
-  "types": "lib/esm/index.d.ts",
+  "version": "0.0.0",
   "files": [
-    "lib"
+    "dist"
   ],
+  "main": "./dist/ui-components.umd.js",
+  "module": "./dist/ui-components.es.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-components.es.js",
+      "require": "./dist/ui-components.umd.js"
+    }
+  },
   "scripts": {
-    "test": "jest",
-    "test:update": "jest --u --colors",
-    "test:watch": "jest --watch --colors",
-    "test:coverage": "jest --coverage --colors",
-    "watch": "tsc -p . --watch",
-    "libbuild": "rm -rf lib && yarn build:esm && yarn build:cjs && yarn add-assets",
-    "build:esm": "tsc",
-    "build:cjs": "tsc --module commonjs --outDir lib/cjs",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:watch": "vite build --watch",
+    "libbuild": "tsc && vite build",
+    "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "lint": "eslint './src/**/*.{ts,tsx}' --max-warnings=0 --color",
-    "lint:css": "stylelint 'src/**/*.tsx' -f verbose --color",
-    "add-assets": "cpx -u 'src/**/!(*.js|*.mdx|*.jsx|*.map|*.ts|*.tsx)' lib/esm && cpx -u 'src/**/!(*.js|*.mdx|*.jsx|*.map|*.ts|*.tsx)' lib/cjs"
-  },
-  "peerDependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "keywords": [],
-  "author": "",
-  "jest": {
-    "testEnvironment": "jsdom",
-    "testMatch": [
-      "<rootDir>/src/**/?(*.)+(test).ts?(x)"
-    ]
-  },
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.17.9",
-    "@babel/preset-env": "^7.16.11",
-    "@babel/preset-react": "^7.16.7",
-    "@babel/preset-typescript": "^7.16.7",
-    "@commitlint/config-conventional": "^16.2.1",
-    "@storybook/addon-actions": "^6.4.20",
-    "@storybook/addon-essentials": "^6.4.20",
-    "@storybook/addon-interactions": "^6.4.20",
-    "@storybook/addon-links": "^6.4.20",
-    "@storybook/builder-webpack5": "^6.5.0-alpha.39",
-    "@storybook/manager-webpack5": "^6.5.0-alpha.39",
-    "@storybook/react": "^6.4.20",
-    "@storybook/testing-library": "^0.0.9",
-    "@testing-library/jest-dom": "^5.16.1",
-    "@testing-library/react": "^12.1.2",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.4.0",
-    "@types/react": "^18.0.0",
-    "@types/react-dom": "^18.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.19.0",
-    "@typescript-eslint/parser": "^5.19.0",
-    "babel-jest": "^27.5.1",
-    "babel-loader": "^8.2.4",
-    "cpx": "^1.5.0",
-    "eslint": "^8.13.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.2.0",
-    "eslint-plugin-react": "^7.29.4",
-    "react-dom": "^17.0.2",
-    "webpack": "^5.68.0"
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/styled": "^11.8.1",
-    "@monorepo/design-tokens": "^0.1.7"
+    "@emotion/react": "^11.9.3",
+    "@emotion/styled": "^11.9.3",
+    "@monorepo/design-tokens": "^0.1.7",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@storybook/addon-actions": "^6.5.9",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-vite": "^0.1.36",
+    "@storybook/react": "^6.5.9",
+    "@storybook/testing-library": "^0.0.13",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "babel-loader": "^8.2.5",
+    "c8": "^7.11.3",
+    "jsdom": "^19.0.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9",
+    "vite-plugin-dts": "^1.2.0",
+    "vitest": "^0.15.1"
   }
 }

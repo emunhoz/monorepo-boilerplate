@@ -1,7 +1,4 @@
-import { Button } from '@monorepo/ui-components'
 import { useState } from 'react'
-import './App.css'
-import logo from './logo.svg'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,7 +26,6 @@ function App() {
       <header className="App-header">
         {data.length !== 0 && <p>{data?.message}</p>}
         {isLoading && <p>Loading...</p>}
-        <img src={logo} className="App-logo" alt="logo" />
         <p>Hello Vite + React!</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
@@ -58,7 +54,7 @@ function App() {
             Vite Docs
           </a>
         </p>
-        <Button onClick={getData} label={'Get data from api'} primary={true} size={'large'} />
+        <button onClick={getData}>Get data from api</button>
       </header>
     </div>
   )
