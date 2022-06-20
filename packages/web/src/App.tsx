@@ -3,6 +3,8 @@ import { useState } from 'react'
 import './App.css'
 import logo from './logo.svg'
 
+const API = import.meta.env.VITE_ENDPOINT
+
 function App() {
   const [count, setCount] = useState(0)
   const [data, setData] = useState<any>([])
@@ -11,7 +13,7 @@ function App() {
   async function getData() {
     setLoading(true)
     try {
-      await fetch(`http://localhost:3003/api/product`, {})
+      await fetch(`${API}/api/product`, {})
         .then((response) => response.json())
         .then((data) => {
           setData(data)
