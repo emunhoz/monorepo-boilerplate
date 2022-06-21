@@ -1,7 +1,7 @@
 {
   "name": "@monorepo/ui-components",
   "private": true,
-  "version": "0.1.11",
+  "version": "0.1.12",
   "files": [
     "dist"
   ],
@@ -26,7 +26,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "^11.9.3",
-    "@monorepo/design-tokens": "^0.1.7",
+    "@monorepo/design-tokens": "^0.1.12",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },

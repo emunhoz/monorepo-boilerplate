@@ -1,7 +1,7 @@
 {
   "name": "@monorepo/design-tokens",
   "private": true,
-  "version": "0.1.7",
+  "version": "0.1.12",
   "description": "Monorepo design tokens",
   "author": "emunhoz <edermunhozsantos@gmail.com>",
   "license": "ISC",
