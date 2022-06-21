@@ -15,7 +15,7 @@ This is a monorepo repository using [npm workspaces](https://docs.npmjs.com/cli/
 
 ## 💥 Features
 
-- ⚡️ Vite 2.0 - (React 10.0.0)
+- ⚡️ Vite 2.0 - (React 18.0.0)
 - 📖 Storybook 6
 - 📦 Yarn Workspaces
 - ✨ Host Multiple CRA Apps, Vite apps, Component Libraries & Storybooks in one monorepo
@@ -87,7 +87,7 @@ To run all components with storybook [`@monorepo/ui-components`](./packages/ui-c
 | [`@monorepo/design-tokens`](./packages/design-tokens) | Design tokens (colors, typography, attributes...)                                      |
 | [`@common/**`](./packages/commons)                    | Common functions, images, lints (eslint, stylelint, prettier) and other generics setup |
 | [`@monorepo/ui-components`](./packages/ui-components) | React library components with [stories](https://storybook.js.org/)                     |
-| [`@monorepo/web`](./packages/weba)                    | Front end application create with vite app                                     |
+| [`@monorepo/web`](./packages/web)                    | Front end application create with vite app                                     |
 
 ## 🚨 Code standard
 
@@ -106,5 +106,5 @@ To run all components with storybook [`@monorepo/ui-components`](./packages/ui-c
 | `npm run storybook`        | Run storybook doc components                                                                                                                                                              |
 | `npm run watch:tokens`     | Watch design-tokens package                                                                                                                                                               |
 | `npm run watch:components` | Watch ui-components package                                                                                                                                                               |
-| `npm run build-app`        | Build of front app([`@monorepo/cra`](./packages/cra)) and generate a directory with all assets in the following path: `packages/webapp/build`                                                |
+| `npm run build-app`        | Build of front app([`@monorepo/cra`](./packages/web)) and generate a directory with all assets in the following path: `packages/webapp/build`                                                |
 | `npm run build-storybook`  | Build of storybook with components([`@monorepo/ui-components`](./packages/ui-components)) and generate a directory with all assets in the following path: `packages/ui-components/storybook-static` |
