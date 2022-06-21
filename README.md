@@ -15,10 +15,10 @@ This is a monorepo repository using [npm workspaces](https://docs.npmjs.com/cli/
 
 ## 💥 Features
 
-- ⚛️ Create React App (CRA 5) - (React 17.0.2)
-- 📖 Storybook 6.4.18
-- 📦 Npm Workspaces
-- ✨ Host Multiple CRA Apps, Component Libraries & Storybooks in one monorepo
+- ⚡️ Vite 2.0 - (React 10.0.0)
+- 📖 Storybook 6
+- 📦 Yarn Workspaces
+- ✨ Host Multiple CRA Apps, Vite apps, Component Libraries & Storybooks in one monorepo
 - 🔥 Hot Reload all Apps, Components & Storybooks
 - 👨‍🔬 Test all workspaces with Eslint & Jest using one command
 
@@ -42,8 +42,8 @@ Design tokens live demo:
 
 ![Design tokens](docs/images/design-tokens.png)
 
-Create React App live demo:
-- ➡️ https://monorepo-boilerplate-cra.vercel.app/
+Vite App live demo:
+- ➡️ https://monorepo-boilerplate-web.vercel.app/
 
 ## ⚠️ Requirements
 
@@ -65,19 +65,19 @@ In the root folder run following commands _(all the below commands need to run o
 Install all dependecies with:
 
 ```bash
-  npm i
+  yarn
 ```
 
 To run the front end application [`@monorepo/cra`](./packages/cra) :
 
 ```bash
-  npm run start
+  yarn start
 ```
 
 To run all components with storybook [`@monorepo/ui-components`](./packages/ui-components) :
 
 ```bash
-  npm run storybook
+  yarn storybook
 ```
 
 ## 🗂 Monorepo structure
@@ -87,7 +87,7 @@ To run all components with storybook [`@monorepo/ui-components`](./packages/ui-c
 | [`@monorepo/design-tokens`](./packages/design-tokens) | Design tokens (colors, typography, attributes...)                                      |
 | [`@common/**`](./packages/commons)                    | Common functions, images, lints (eslint, stylelint, prettier) and other generics setup |
 | [`@monorepo/ui-components`](./packages/ui-components) | React library components with [stories](https://storybook.js.org/)                     |
-| [`@monorepo/webapp`](./packages/webapp)               | Front end application create with create-react-app                                     |
+| [`@monorepo/web`](./packages/weba)                    | Front end application create with vite app                                     |
 
 ## 🚨 Code standard
 
