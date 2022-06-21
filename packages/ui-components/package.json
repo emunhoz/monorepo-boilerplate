@@ -5,21 +5,19 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/ui-components.umd.js",
-  "module": "./dist/ui-components.es.js",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/ui-components.es.js",
-      "require": "./dist/ui-components.umd.js"
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
     }
   },
   "scripts": {
-    "dev": "vite",
     "build": "tsc && vite build",
     "build:watch": "vite build --watch",
     "libbuild": "tsc && vite build",
-    "preview": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "vitest",

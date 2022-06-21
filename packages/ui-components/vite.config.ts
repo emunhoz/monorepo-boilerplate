@@ -14,18 +14,19 @@ export default defineConfig({
   ],
   build: {
     lib: {
-        entry: path.resolve(__dirname, 'src/index.ts'),
-        name: 'ui-components',
+        entry: path.resolve(__dirname, 'src/index.tsx'),
+        name: 'index',
         formats: ['es', 'umd'],
-        fileName: (format) => `ui-components.${format}.js`,
+        fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-        external: ['react', 'react-dom', '@emotion/styled'],
+        external: ['react', 'react-dom', '@emotion/styled', '@emotion/react'],
         output: {
             globals: {
                 react: 'React',
                 'react-dom': 'ReactDOM',
                 '@emotion/styled': 'styled',
+                '@emotion/react': 'ThemeProvider',
             },
         },
     },

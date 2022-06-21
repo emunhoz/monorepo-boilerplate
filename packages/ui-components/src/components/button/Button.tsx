@@ -1,7 +1,11 @@
 import React from 'react'
 import * as S from './Button.style'
 
-interface ButtonProps {
+import createTheme from '@monorepo/design-tokens'
+
+console.log(createTheme, 'createTheme')
+
+export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */

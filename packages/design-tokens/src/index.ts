@@ -3,7 +3,7 @@ import { breakpoints, Breakpoints } from './breakpoints'
 import { palette, Palette } from './palette'
 import { typography, Typography } from './typography'
 
-export interface Theme {
+interface Theme {
   palette: Palette
   typography: Typography
   attributes: Attributes
