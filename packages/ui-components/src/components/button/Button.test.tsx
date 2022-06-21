@@ -1,5 +1,5 @@
-import { render, screen } from '@testing-library/react'
 import { expect } from 'vitest'
+import { render, screen } from '../../test-utils'
 import { Button } from './Button'
 
 test("Header contains correct text", () => {

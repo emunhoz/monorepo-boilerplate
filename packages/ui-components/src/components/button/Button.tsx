@@ -1,9 +1,4 @@
-import React from 'react'
-import * as S from './Button.style'
-
-import createTheme from '@monorepo/design-tokens'
-
-console.log(createTheme, 'createTheme')
+import * as S from './Button.style';
 
 export interface ButtonProps {
   /**
