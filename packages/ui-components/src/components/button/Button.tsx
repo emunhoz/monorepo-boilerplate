@@ -1,10 +1,10 @@
-import * as S from './Button.style';
+import * as S from './Button.style'
 
 export interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  primary: boolean,
+  primary: boolean
   /**
    * How large should the button be?
    */
@@ -12,7 +12,7 @@ export interface ButtonProps {
   /**
    * Button contents
    */
-  label: string,
+  label: string
   /**
    * Optional click handler
    */
@@ -20,13 +20,9 @@ export interface ButtonProps {
 }
 
 export const Button = ({ primary, size = 'medium', label, ...props }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary'
   return (
-    <S.ButtonWrapper
-      type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      {...props}
-    >
+    <S.ButtonWrapper type="button" className={['storybook-button', `storybook-button--${size}`, mode].join(' ')} {...props}>
       {label}
     </S.ButtonWrapper>
   )

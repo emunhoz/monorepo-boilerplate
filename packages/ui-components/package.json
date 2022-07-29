@@ -5,19 +5,10 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
-    }
-  },
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
   "scripts": {
     "build": "tsc && vite build",
-    "build:watch": "vite build --watch",
-    "libbuild": "tsc && vite build",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "vitest",

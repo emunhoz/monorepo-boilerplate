@@ -14,9 +14,7 @@
     "commit": "git-cz",
     "publish:ci": "lerna publish from-package --yes --no-verify-registry --no-verify-access && git add -u .",
     "version:ci": "lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'",
-    "watch": "lerna run --parallel watch",
     "test:update": "lerna run --parallel test:update",
-    "postinstall": "yarn workspace @monorepo/design-tokens libbuild && yarn workspace @monorepo/ui-components libbuild",
     "start:web": "yarn workspace @monorepo/web-react-vite-app dev",
     "start:server": "yarn workspace @monorepo/server start",
     "build-app": "yarn workspace @monorepo/web-react-vite-app build",
@@ -24,18 +22,20 @@
     "build-storybook": "yarn workspace @monorepo/ui-components build-storybook",
     "lint": "lerna run --parallel lint",
     "lint:css": "lerna run --parallel lint:css",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "test:ci": "lerna run --parallel test:coverage"
   },
   "devDependencies": {
-    "lerna": "^4.0.0",
-    "typescript": "^4.6.3",
     "@commitlint/config-conventional": "^12.1.4",
     "@commons/stylelint-config": "*",
     "commitizen": "^4.2.2",
     "commitlint-config-monorepo": "^2.0.2",
     "cz-conventional-changelog": "^3.3.0",
     "git-commit-msg": "^0.3.0",
-    "husky": "^6.0.0"
+    "husky": "^6.0.0",
+    "lerna": "^4.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.6.3"
   },
   "config": {
     "commitizen": {

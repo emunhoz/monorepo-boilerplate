@@ -3,6 +3,10 @@ import { useState } from 'react'
 import './App.css'
 import logo from './logo.svg'
 
+import theme from '@monorepo/design-tokens'
+
+console.log(theme, 'theasdme')
+
 const API = import.meta.env.VITE_ENDPOINT
 
 function App() {
