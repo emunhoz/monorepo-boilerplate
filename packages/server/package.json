@@ -1,6 +1,6 @@
 {
   "name": "@monorepo/server",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
