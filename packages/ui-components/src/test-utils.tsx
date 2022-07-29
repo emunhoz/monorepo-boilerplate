@@ -1,11 +1,7 @@
 import { render } from '@testing-library/react'
 import { CustomThemeProvider } from './index'
 
-const AllTheProviders = ({ children }: any) => (
-  <CustomThemeProvider>
-    {children}
-  </CustomThemeProvider>
-)
+const AllTheProviders = ({ children }: any) => <CustomThemeProvider>{children}</CustomThemeProvider>
 
 const customRender = (ui: any, options?: any) => render(ui, { wrapper: AllTheProviders, ...options })
 
