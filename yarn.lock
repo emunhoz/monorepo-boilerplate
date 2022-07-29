@@ -7825,6 +7825,11 @@ git-commit-msg@^0.3.0:
   resolved "https://registry.yarnpkg.com/git-commit-msg/-/git-commit-msg-0.3.0.tgz#3c697ff4dceb7efb6ee1347d1e2a30b9fd92cb2d"
   integrity sha512-/aPb80H9ibmiKm8A63pAi2zDxA0Q1SkZUDpUVMj7/e1AQTAAeGhUAo7mCo+PxEuJI54wW5g7A3o4H8c4F7O2Lg==
 
+git-cz@^4.9.0:
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/git-cz/-/git-cz-4.9.0.tgz#c0604ff85b37046d51fd85e265040032c9617bf2"
+  integrity sha512-cSRL8IIOXU7UFLdbziCYqg8f8InwLwqHezkiRHNSph7oZqGv0togId1kMTfKil6gzK0VaSXeVBb4oDl0fQCHiw==
+
 git-raw-commits@^2.0.8:
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/git-raw-commits/-/git-raw-commits-2.0.11.tgz#bc3576638071d18655e1cc60d7f524920008d723"
