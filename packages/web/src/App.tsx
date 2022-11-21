@@ -7,7 +7,7 @@ import theme from '@monorepo/design-tokens'
 
 console.log(theme, 'theasdme')
 
-const API = import.meta.env.VITE_ENDPOINT
+const API = import.meta.env.VITE_ENDPOINT || 'http://localhost:3003'
 
 function App() {
   const [count, setCount] = useState(0)
