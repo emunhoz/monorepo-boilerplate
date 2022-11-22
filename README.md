@@ -66,13 +66,13 @@ Install all dependecies with:
   yarn
 ```
 
-To run the front end application [`@monorepo-boilerplate/web`](./packages/web) :
+Run the front end application [`@monorepo-boilerplate/web`](./packages/web) and back end server application [`@monorepo-boilerplate/server`](./packages/server) :
 
 ```bash
-  yarn start:web
+  yarn start
 ```
 
-To run all components with storybook [`@monorepo-boilerplate/ui-components`](./packages/ui-components) :
+Storybook [`@monorepo-boilerplate/ui-components`](./packages/ui-components) :
 
 ```bash
   yarn storybook
