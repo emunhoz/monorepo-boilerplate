@@ -11,11 +11,11 @@
 
 ## Getting started
 
-This is a monorepo repository using [npm workspaces](https://docs.npmjs.com/cli/v8/using-npm/workspaces), [Commitzen](http://commitizen.github.io/cz-cli/) and [Conventional Commits](https://conventionalcommits.org) to maintain and manage component versions and for documentation, we use [Storybook](https://storybook.js.org/).
+This is a monorepo repository using [yarn workspaces](https://classic.yarnpkg.com/lang/en/docs/workspaces/), [Commitzen](http://commitizen.github.io/cz-cli/) and [Conventional Commits](https://conventionalcommits.org) to maintain and manage component versions and for documentation, we use [Storybook](https://storybook.js.org/).
 
 ## 💥 Features
 
-- ⚡️ Vite 2.0 - (React 18.0.0)
+- ⚡️ Vite 2.0 - (React 18)
 - 📖 Storybook 6
 - 📦 Yarn Workspaces
 - ✨ Host Multiple CRA Apps, Vite apps, Component Libraries & Storybooks in one monorepo
@@ -37,18 +37,16 @@ Storybook live demo:
 
 ![Storybook](docs/images/ui-components.png)
 
-Design tokens live demo:
-- ➡️ https://monorepo-boilerplate-storybook.vercel.app/?path=/docs/design-system-colors--page
-
-![Design tokens](docs/images/design-tokens.png)
-
 Vite App live demo:
 - ➡️ https://monorepo-boilerplate-web.vercel.app/
 
+Backend server:
+- ➡️ https://monorepo-boilerplate-server.vercel.app/api/
+
 ## ⚠️ Requirements
 
-- Node
-- NPM
+- Node > v18
+- NPM > v8
 
 _In order to use semantic release with github actions, you need to add a new secrets in your github repository. This is needed in order for Semantic Release to be able to publish a new release for the Github repository._
 
@@ -68,13 +66,13 @@ Install all dependecies with:
   yarn
 ```
 
-To run the front end application [`@monorepo/cra`](./packages/cra) :
+To run the front end application [`@monorepo-boilerplate/web`](./packages/web) :
 
 ```bash
-  yarn start
+  yarn start:web
 ```
 
-To run all components with storybook [`@monorepo/ui-components`](./packages/ui-components) :
+To run all components with storybook [`@monorepo-boilerplate/ui-components`](./packages/ui-components) :
 
 ```bash
   yarn storybook
@@ -84,10 +82,10 @@ To run all components with storybook [`@monorepo/ui-components`](./packages/ui-c
 
 | Package                                               | Description                                                                            |
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| [`@monorepo/design-tokens`](./packages/design-tokens) | Design tokens (colors, typography, attributes...)                                      |
+| [`@monorepo-boilerplate/design-tokens`](./packages/design-tokens) | Design tokens (colors, typography, attributes...)                                      |
 | [`@common/**`](./packages/commons)                    | Common functions, images, lints (eslint, stylelint, prettier) and other generics setup |
-| [`@monorepo/ui-components`](./packages/ui-components) | React library components with [stories](https://storybook.js.org/)                     |
-| [`@monorepo/web`](./packages/web)                    | Front end application create with vite app                                     |
+| [`@monorepo-boilerplate/ui-components`](./packages/ui-components) | React library components with [stories](https://storybook.js.org/)                     |
+| [`@monorepo-boilerplate/web`](./packages/web)                    | Front end application create with vite app                                     |
 
 ## 🚨 Code standard
 
@@ -100,11 +98,11 @@ To run all components with storybook [`@monorepo/ui-components`](./packages/ui-c
 
 | Command                 | Description                                                                                                                                                                               |
 | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm i`                  | Install all dependencies                                                                                                                                                                  |
-| `npm run start`            | Run frontend app                                                                                                                                                                          |
-| `npm run test:ci`          | Run all tests                                                                                                                                                                             |
-| `npm run storybook`        | Run storybook doc components                                                                                                                                                              |
-| `npm run watch:tokens`     | Watch design-tokens package                                                                                                                                                               |
-| `npm run watch:components` | Watch ui-components package                                                                                                                                                               |
-| `npm run build-app`        | Build of front app([`@monorepo/cra`](./packages/web)) and generate a directory with all assets in the following path: `packages/webapp/build`                                                |
-| `npm run build-storybook`  | Build of storybook with components([`@monorepo/ui-components`](./packages/ui-components)) and generate a directory with all assets in the following path: `packages/ui-components/storybook-static` |
+| `yarn`                  | Install all dependencies                                                                                                                                                                  |
+| `yarn start`            | Run frontend/backend server                                                                                                                                                                          |
+| `yarn test:ci`          | Run all tests                                                                                                                                                                             |
+| `yarn storybook`        | Run storybook doc components                                                                                                                                                              |
+| `yarn watch:tokens`     | Hot reload design-tokens package                                                                                                                                                               |
+| `yarn watch:components` | Hot reload ui-components package                                                                                                                                                               |
+| `yarn build-app`        | Build of front app([`@monorepo-boilerplate/web`](./packages/web)) and generate a directory with all assets in the following path: `packages/web/build`                                                |
+| `yarn build-storybook`  | Build of storybook with components([`@monorepo-boilerplate/ui-components`](./packages/ui-components)) and generate a directory with all assets in the following path: `packages/ui-components/storybook-static` |
