@@ -4,7 +4,8 @@
   "version": "0.1.16",
   "scripts": {
     "start": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
+    "lint": "tsc",
     "preview": "vite preview"
   },
   "dependencies": {

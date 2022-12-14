@@ -8,7 +8,8 @@
   "main": "./src/index.tsx",
   "types": "./src/index.tsx",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "vite build",
+    "lint": "tsc",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "vitest",

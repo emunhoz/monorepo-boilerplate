@@ -1,7 +1,7 @@
-import { attributes, Attributes } from './src/attributes'
-import { breakpoints, Breakpoints } from './src/breakpoints'
-import { palette, Palette } from './src/palette'
-import { typography, Typography } from './src/typography'
+import { attributes, Attributes } from './attributes'
+import { breakpoints, Breakpoints } from './breakpoints'
+import { palette, Palette } from './palette'
+import { typography, Typography } from './typography'
 
 interface Theme {
   palette: Palette
