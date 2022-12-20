@@ -1,18 +1,13 @@
-import { Button } from '@monorepo/ui-components'
 import { useState } from 'react'
+import reactLogo from './assets/react.svg'
 import './App.css'
-import logo from './logo.svg'
-
-import theme from '@monorepo/design-tokens'
-
-console.log(theme, 'theasdme')
-
-const API = import.meta.env.VITE_ENDPOINT || 'http://localhost:3003'
+import { Button } from '@monorepo/ui-components'
 
 function App() {
   const [count, setCount] = useState(0)
   const [data, setData] = useState<any>([])
   const [isLoading, setLoading] = useState<boolean>(false)
+  const API = import.meta.env.VITE_ENDPOINT || 'http://localhost:3003'
 
   async function getData() {
     setLoading(true)
@@ -32,30 +27,33 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+      <div>
         {data.length !== 0 && <p>{data?.message}</p>}
         {isLoading && <p>Loading...</p>}
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="/vite.svg" className="logo" alt="Vite logo" />
+        </a>
+        <a href="https://reactjs.org" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <div><button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        </div>
+        <br />
+        <div>
+          <Button onClick={getData} label={'Get data from api'} primary={true} size={'large'} />
+        </div>
         <p>
-          <button type="button" onClick={() => setCount(count => count + 1)}>
-            count is: {count}
-          </button>
+          Edit <code>src/App.tsx</code> and save to test HMR
         </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
-            Learn React
-          </a>
-          {' | '}
-          <a className="App-link" href="https://vitejs.dev/guide/features.html" target="_blank" rel="noopener noreferrer">
-            Vite Docs
-          </a>
-        </p>
-        <Button onClick={getData} label={'Get data from api'} primary={true} size={'large'} />
-      </header>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </div>
   )
 }
