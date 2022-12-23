@@ -12,8 +12,9 @@
   "scripts": {
     "start": "lerna run --parallel start",
     "commit": "git-cz",
-    "publish:ci": "lerna publish from-package --yes --no-verify-registry --no-verify-access && git add -u .",
-    "version:ci": "lerna version --yes --conventional-commits --create-release github --message 'chore(release): publish'",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=!docs && changeset publish",
     "test:update": "lerna run --parallel test:update",
     "start:web": "yarn workspace @monorepo/web-react-vite-app dev",
     "start:server": "yarn workspace @monorepo/server start",
@@ -28,6 +29,7 @@
   "devDependencies": {
     "@commitlint/config-conventional": "^12.1.4",
     "@commons/stylelint-config": "*",
+    "@changesets/cli": "^2.26.0",
     "commitizen": "^4.2.2",
     "commitlint-config-monorepo": "^2.0.2",
     "cz-conventional-changelog": "^3.3.0",
