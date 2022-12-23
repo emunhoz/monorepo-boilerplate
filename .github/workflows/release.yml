@@ -33,7 +33,7 @@ jobs:
 
       - run: yarn install --frozen-lockfile
 
-      - name: Publish to NPM
+      - name: Generate version
         id: changesets
         uses: changesets/action@v1
         with:
