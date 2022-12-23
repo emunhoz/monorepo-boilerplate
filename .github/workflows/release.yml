@@ -4,6 +4,10 @@ on:
   push:
     branches:
       - main
+  workflow_run:
+    workflows: ['Lints', 'Coverage']
+    types:
+      - completed
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
