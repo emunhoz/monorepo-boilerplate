@@ -14,7 +14,7 @@
     "commit": "git-cz",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=!docs && changeset publish",
+    "release": "changeset publish",
     "test:update": "lerna run --parallel test:update",
     "start:web": "yarn workspace @monorepo/web-react-vite-app dev",
     "start:server": "yarn workspace @monorepo/server start",
